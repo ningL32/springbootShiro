@@ -1,3 +1,1 @@
-1111111111
-这是shiro+springboot
-git reset -
+shiro+springboot 实现权限控制和3分钟自动登录的例子
