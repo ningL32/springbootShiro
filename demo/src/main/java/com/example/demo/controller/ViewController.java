@@ -34,7 +34,6 @@ public class ViewController {
         mv.setViewName("index.html");
         return mv;
     }
-
     @RequestMapping("/logout")
     public String logout() {
         Subject subject = SecurityUtils.getSubject();//取出当前验证主体
