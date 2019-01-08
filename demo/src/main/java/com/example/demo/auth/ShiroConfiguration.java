@@ -31,8 +31,10 @@ public class ShiroConfiguration {
          * 可以看DefaultFilter,这是一个枚举类，定义了很多的拦截器authc,anon等分别有对应的拦截器
          * */
         LinkedHashMap<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
+        filterChainDefinitionMap.put("/play/**", "anon");
         filterChainDefinitionMap.put("/index", "authc");//代表着前面的url路径，用后面指定的拦截器进行拦截
         filterChainDefinitionMap.put("/login", "anon");
+
         filterChainDefinitionMap.put("/loginUser", "anon");
         filterChainDefinitionMap.put("/admin", "roles[admin]");//admin的url，要用角色是admin的才可以登录,对应的拦截器是RolesAuthorizationFilter
         filterChainDefinitionMap.put("/edit", "perms[edit]");//拥有edit权限的用户才有资格去访问
