@@ -3,12 +3,13 @@ package com.example.demo.pojo.playIdiom;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.enums.IdType;
 
 import java.util.Date;
 
 @TableName("paly_play")
 public class PlayPlay {
-    @TableId
+    @TableId(type = IdType.AUTO)
     private Integer id;
     @TableField("user_id")
     private Integer userId;

@@ -20,18 +20,18 @@ import org.springframework.web.servlet.ModelAndView;
 public class ViewController {
     @RequestMapping("/login")
     public ModelAndView login(ModelAndView mv) {
-        mv.setViewName("login.html");
+        mv.setViewName("/pages/login.html");
         return mv;
     }
     @RequestMapping("/hell")
     @RequiresPermissions("hello")
     public ModelAndView hello(ModelAndView mv) {
-        mv.setViewName("index.html");
+        mv.setViewName("/pages/index.html");
         return mv;
     }
     @RequestMapping("/index")
     public ModelAndView index(ModelAndView mv) {
-        mv.setViewName("index.html");
+        mv.setViewName("/pages/index.html");
         return mv;
     }
     @RequestMapping("/logout")

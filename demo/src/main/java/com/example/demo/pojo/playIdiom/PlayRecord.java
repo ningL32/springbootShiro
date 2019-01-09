@@ -3,10 +3,11 @@ package com.example.demo.pojo.playIdiom;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.enums.IdType;
 
 @TableName("play_record")
 public class PlayRecord {
-    @TableId
+    @TableId(type = IdType.AUTO)
     private Integer id;
     private String idioms;
     @TableField("play_record_id")

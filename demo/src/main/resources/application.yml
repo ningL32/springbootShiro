@@ -18,10 +18,10 @@ spring:
         time-zone: GMT+8
         date-format: yyyy-MM-dd HH:mm:ss
     resources:
-            static-locations: classpath:/static/,classpath:/templates/pages/
+            static-locations: classpath:/static/,classpath:/templates/
     thymeleaf:
             suffix: .html
-            prefix: classpath:/templates/pages/
+            prefix: classpath:/templates/
             mode: HTML5
             encoding: UTF-8
             cache: false
@@ -29,4 +29,7 @@ mybatis-plus:
   mapper-locations: classpath*:mappers/**/*.xml
   #实体扫描，多个package用逗号或者分号分隔
   typeAliasesPackage: com.example.demo.pojo
+  global-config:
+      db-config:
+        db-type: mysql
 
